@@ -39,9 +39,9 @@ class Oauth_server {
 	}
 	
 	public function auth_fail() {
-		$res['WWW-Authenticate'] = 'Bearer realm="PlayBlog REST API"';
+		$res['WWW-Authenticate'] = 'Bearer realm="FooBar REST API"';
 		$this->ci->output->set_status_header(403);
-		$this->ci->output->set_header('WWW-Authenticate: Bearer realm="PlayBlog REST API"');
+		$this->ci->output->set_header('WWW-Authenticate: Bearer realm="FooBar REST API"');
 		$this->ci->output->set_output(json_encode(array('error' => 'invalid_token')));		
 	}
 	
